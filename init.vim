@@ -1,47 +1,12 @@
-" " map space as leader key
-vnoremap <SPACE> <Nop>
-nnoremap <SPACE> <Nop>
-let mapleader=" "
 
-" " yank inside string
-nnoremap <leader>` "+yi`
-nnoremap <leader>" "+yi"
-nnoremap <leader>' "+yi'
 
-:set ignorecase
-:set smartcase
-" " Copy to clipboard
-vnoremap  <leader>y "+y
-nnoremap  <leader>y "+y
 
-" " Paste from clipboard
-nnoremap <leader>p "+p
-vnoremap <leader>p "+p
-
-" " move lines up/down
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '>-2<CR>gv=gv
-
-" " set scroll off
-:set scrolloff=99
-:set relativenumber
 
 " " fzf open
 nnoremap <C-p> :GFiles<CR>
 
 
 
-call plug#begin()
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'navarasu/onedark.nvim'
-call plug#end()
-
-" " set the theme
-let g:onedark_config = {
-    \ 'style': 'darker',
-\}
-colorscheme onedark
 
 " " add small deletes (d w) to numbered registers
 if exists("##TextYankPost")

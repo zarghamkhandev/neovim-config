@@ -62,3 +62,5 @@ keymap("n", "<leader>'", '"+yi\'', opts)
 keymap("n", '<leader>p', '"+p', opts)
 keymap("n", '<leader>y', '"+y', opts)
 
+
+keymap('n', '<c-P>',"<cmd>lua require('fzf-lua').files()<CR>",opts)

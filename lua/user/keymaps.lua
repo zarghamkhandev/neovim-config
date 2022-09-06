@@ -64,3 +64,4 @@ keymap("n", '<leader>y', '"+y', opts)
 
 
 keymap('n', '<c-P>',"<cmd>lua require('fzf-lua').files()<CR>",opts)
+keymap('n', '<c-F>',"<cmd>lua require('fzf-lua').live_grep({ cmd = 'git grep --line-number --column --color=always' })<CR>",opts)

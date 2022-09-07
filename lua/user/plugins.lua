@@ -50,6 +50,8 @@ return packer.startup(function(use)
   use 'navarasu/onedark.nvim'
   use 'kyazdani42/nvim-web-devicons' -- Nvim tree stuff
   use 'kyazdani42/nvim-tree.lua'
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions

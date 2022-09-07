@@ -70,3 +70,6 @@ keymap('n', '<c-F>',"<cmd>lua require('fzf-lua').live_grep({ cmd = 'git grep --l
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- source neovim files
+keymap("n", "<leader>sv", ":luafile $MYVIMRC<CR>", opts)

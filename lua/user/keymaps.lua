@@ -62,6 +62,11 @@ keymap("n", "<leader>'", '"+yi\'', opts)
 keymap("n", '<leader>p', '"+p', opts)
 keymap("n", '<leader>y', '"+y', opts)
 
+if vim.fn.exists("g:vscode") ~= 0 then return end
 
+-- FZF 
 keymap('n', '<c-P>',"<cmd>lua require('fzf-lua').files()<CR>",opts)
 keymap('n', '<c-F>',"<cmd>lua require('fzf-lua').live_grep({ cmd = 'git grep --line-number --column --color=always' })<CR>",opts)
+
+-- Nvimtree
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)

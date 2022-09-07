@@ -48,6 +48,8 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use 'navarasu/onedark.nvim'
+  use 'kyazdani42/nvim-web-devicons' -- Nvim tree stuff
+  use 'kyazdani42/nvim-tree.lua'
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions

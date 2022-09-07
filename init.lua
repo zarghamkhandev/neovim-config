@@ -1,5 +1,10 @@
-require "user.options"
 require "user.keymaps"
+
+if vim.fn.exists("g:vscode") ~= 0 then 
+    return 
+end
+
+require "user.options"
 require "user.colorscheme"
 require "user.plugins"
 require "user.cmp"

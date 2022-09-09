@@ -67,13 +67,8 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters 
-  -- fzf
-  use { 'ibhagwan/fzf-lua',
-    -- optional for icon support
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
-  use { "junegunn/fzf", run = ":call fzf#install()" }
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters 
+
 
   -- Treesitter
   use {
@@ -83,6 +78,11 @@ return packer.startup(function(use)
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   -- Git
   use "lewis6991/gitsigns.nvim"
+    
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use "natecraddock/telescope-zf-native.nvim" -- used for sorting alogorithm
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

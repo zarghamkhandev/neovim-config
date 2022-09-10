@@ -20,3 +20,4 @@ require "user.telescope"
 require "user.lualine"
 require "user.indentline"
 require "user.whichkey"
+require'alpha'.setup(require'alpha.themes.startify'.config)

@@ -1,9 +1,10 @@
 require("user.keymaps")
 
 if vim.fn.exists("g:vscode") ~= 0 then
-	return
+  return
 end
 
+require("user.whichkey")
 require("user.options")
 require("user.colorscheme")
 require("user.plugins")
@@ -19,4 +20,4 @@ require("user.toggleterm")
 require("user.telescope")
 require("user.lualine")
 require("user.indentline")
-require("user.whichkey")
+require("user.alpha")

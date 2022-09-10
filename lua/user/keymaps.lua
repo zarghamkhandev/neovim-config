@@ -62,12 +62,5 @@ keymap("n", '<leader>y', '"+y', opts)
 
 if vim.fn.exists("g:vscode") ~= 0 then return end
 
--- Telescope
-keymap('n', '<c-P>',":Telescope find_files<CR>",opts)
-keymap('n', '<c-F>',":Telescope live_grep<CR>",opts)
-
--- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
 -- source neovim files
 keymap("n", "<leader>sv", ":luafile $MYVIMRC<CR>", opts)

@@ -16,11 +16,8 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-
 -- Navigate buffers
 keymap("n", "<Tab>", ":bnext<CR>", opts)
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -33,7 +30,7 @@ keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
 keymap("v", "<S-k>", ":m .-2<CR>==", opts)
-keymap("v", "<S-j>", ":m .+1<CR>==", opts) 
+keymap("v", "<S-j>", ":m .+1<CR>==", opts)
 
 -- keep the yank when pasting over selection
 keymap("v", "p", '"_dP', opts)
@@ -55,13 +52,15 @@ keymap("t", "<S-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- yank inside string
 keymap("n", "<leader>`", "+yi`", opts)
 keymap("n", '<leader>"', '"+yi"', opts)
-keymap("n", "<leader>'", '"+yi\'', opts)
+keymap("n", "<leader>'", "\"+yi'", opts)
 
 -- COPY/Paste from clipboard
-keymap("n", '<leader>p', '"+p', opts)
-keymap("n", '<leader>y', '"+y', opts)
+keymap("n", "<leader>p", '"+p', opts)
+keymap("n", "<leader>y", '"+y', opts)
 
-if vim.fn.exists("g:vscode") ~= 0 then return end
+if vim.fn.exists("g:vscode") ~= 0 then
+	return
+end
 
 -- source neovim files
 keymap("n", "<leader>sv", ":luafile $MYVIMRC<CR>", opts)

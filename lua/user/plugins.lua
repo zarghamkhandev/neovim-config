@@ -56,7 +56,6 @@ return packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/which-key.nvim"
-  use "goolord/alpha-nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

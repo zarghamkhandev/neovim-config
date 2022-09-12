@@ -86,7 +86,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
-  use("natecraddock/telescope-zf-native.nvim") -- used for sorting alogorithm
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -94,3 +94,4 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
+

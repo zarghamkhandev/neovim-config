@@ -42,7 +42,11 @@ local options = {
         "--glob=!.git/",
       },
       file_ignore_patterns = {},
-      path_display = { shorten = 5 },
+       path_display = function(opts, path)
+        local tail = require("telescope.utils").path_tail(path)
+        return string.format("%s    (%s)", tail, path)
+      end,
+
       winblend = 0,
       border = {},
       borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },

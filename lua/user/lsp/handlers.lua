@@ -83,6 +83,11 @@ map("n", "gd", function()
 	return require("telescope.builtin").lsp_definitions()
 end, bufopts)
 
+map("n", "gs", function()
+	return require("telescope.builtin").grep_string()
+end, bufopts)
+
+
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.document_formatting = false

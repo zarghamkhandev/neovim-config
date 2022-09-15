@@ -1,6 +1,6 @@
 local configs = require("nvim-treesitter.configs")
 configs.setup({
-	ensure_installed = "all",
+	ensure_installed = {"lua","javscript","typescript"},
 	sync_install = false,
 	ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
 	autopairs = {

@@ -25,6 +25,22 @@ lsp_installer.on_server_ready(function(server)
 		local pyright_opts = require("user.lsp.settings.pyright")
 		opts = vim.tbl_deep_extend("force", pyright_opts, opts)
 	end
+		
+	if server.name == "angularls" then
+    		local util = require('lspconfig.util') 
+    		local languageServerPath = "~.nvm/versions/node/v16.16.0/lib"
+
+    		local cmd = {"ngserver", "--stdio", "--tsProbeLocations", languageServerPath , "--ngProbeLocations", languageServerPath.."/node_modules/@angular/language-server/index.js"}
+    		local angular_opts = {
+            		cmd = cmd,
+      			root_dir = util.root_pattern("project.json"),
+        		on_new_config = function(new_config,new_root_dir)
+            		new_config.cmd = cmd
+          		end,
+        	}
+    		opts = vim.tbl_deep_extend("force", angular_opts, opts)
+	end
+
 
 	-- This setup() function is exactly the same as lspconfig's setup function.
 	-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md

@@ -1,4 +1,6 @@
 require("user.keymaps")
+require("user.options")
+
 
 if vim.fn.exists("g:vscode") ~= 0 then
     vim.cmd('source $HOME/.config/nvim/vscode/settings.vim')
@@ -7,7 +9,6 @@ end
 
 require("user.plugins")
 require("user.whichkey")
-require("user.options")
 require("user.colorscheme")
 require("user.cmp")
 require("user.lsp")

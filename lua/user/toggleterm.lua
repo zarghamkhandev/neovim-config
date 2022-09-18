@@ -27,6 +27,7 @@ toggleterm.setup({
 function _G.set_terminal_keymaps()
 	local opts = { buffer = 0 }
 	vim.keymap.set("t", "<esc>", [[<cmd>:q<CR>]], opts)
+	vim.keymap.set("n", "<esc>", [[<cmd>:q<CR>]], opts)
 end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead

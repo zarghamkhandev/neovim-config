@@ -1,0 +1,29 @@
+.terminal {
+  border: 1px solid #41a6d9;
+  opacity: 1;
+}
+
+.terminal:not(.focus) {
+  border-color: transparent;
+  opacity: 0.5;
+}
+
+.monaco-editor {
+  opacity: 0.5;
+}
+
+.monaco-editor.focused {
+  opacity: 1;
+}
+
+.monaco-editor.focused::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
+  left: 0;
+  z-index: 1000;
+  border: 1px solid #41a6d9;
+  border-radius: 2px;
+}

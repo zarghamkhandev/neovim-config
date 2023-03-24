@@ -11,8 +11,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Navigate buffers
-keymap("n", "<Tab>", ":bnext<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -56,6 +54,9 @@ keymap("n", "<leader>y", '"+y', opts)
 if vim.fn.exists("g:vscode") ~= 0 then
 	return
 end
+
+-- Navigate buffers
+keymap("n", "<Tab>", ":bnext<CR>", opts)
 
 -- source neovim files
 keymap("n", "<leader>sv", ":luafile $MYVIMRC<CR>", opts)
